@@ -11,7 +11,9 @@ public class Musig {
   public func getMyPubkey() -> Swift.String
   public func getMyReveal(commits: [Swift.String], pubkeys: [Swift.String]) -> Swift.String
   public func getMyCosign(reveals: [Swift.String], pubkeys: [Swift.String]) -> Swift.String
-  public func getAggSignature(reveals: [Swift.String], cosigns: [Swift.String], pubkeys: [Swift.String]) -> Swift.String
-  public func getAggPublicKey(pubkeys: [Swift.String]) -> Swift.String
   @objc deinit
 }
+public func getAggSignature(reveals: [Swift.String], cosigns: [Swift.String], pubkeys: [Swift.String]) -> Swift.String
+public func getAggPublicKey(pubkeys: [Swift.String]) -> Swift.String
+public func generateThresholdPubkey(pubkeys: [Swift.String], threshold: Swift.UInt8) -> Swift.String
+public func generateControlBlock(pubkeys: [Swift.String], threshold: Swift.UInt8, agg_pubkey: Swift.String) -> Swift.String
