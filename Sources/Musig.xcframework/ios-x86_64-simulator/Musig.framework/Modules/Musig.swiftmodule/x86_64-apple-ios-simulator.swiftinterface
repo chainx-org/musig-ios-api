@@ -7,9 +7,8 @@ import Swift
 import _Concurrency
 public class Musig {
   public init(priv: Swift.String)
-  public func getMyCommit() -> Swift.String
   public func getMyPubkey() -> Swift.String
-  public func getMyReveal(commits: [Swift.String], pubkeys: [Swift.String]) -> Swift.String
+  public func getMyReveal() -> Swift.String
   public func getMyCosign(reveals: [Swift.String], pubkeys: [Swift.String]) -> Swift.String
   @objc deinit
 }
