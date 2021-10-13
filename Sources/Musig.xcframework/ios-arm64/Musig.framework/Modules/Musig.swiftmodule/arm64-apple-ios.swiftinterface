@@ -5,13 +5,12 @@ import Foundation
 @_exported import Musig
 import Swift
 import _Concurrency
-public class Musig {
-  public init(priv: Swift.String)
-  public func getMyPubkey() -> Swift.String
-  public func getMyReveal() -> Swift.String
-  public func getMyCosign(reveals: [Swift.String], pubkeys: [Swift.String]) -> Swift.String
-  @objc deinit
-}
+public func getMusig(priv: Swift.String) -> Swift.OpaquePointer?
+public func getMyPubkey(priv: Swift.String) -> Swift.String
+public func getMyReveal(musig: Swift.OpaquePointer?) -> Swift.String
+public func encodeRevealStage(musig: Swift.OpaquePointer?) -> Swift.String
+public func decodeRevealStage(reveal_stage: Swift.String) -> Swift.OpaquePointer?
+public func getMyCosign(musig: Swift.OpaquePointer?, reveals: [Swift.String], pubkeys: [Swift.String]) -> Swift.String
 public func getAggSignature(reveals: [Swift.String], cosigns: [Swift.String], pubkeys: [Swift.String]) -> Swift.String
 public func getAggPublicKey(pubkeys: [Swift.String]) -> Swift.String
 public func generateThresholdPubkey(pubkeys: [Swift.String], threshold: Swift.UInt8) -> Swift.String
