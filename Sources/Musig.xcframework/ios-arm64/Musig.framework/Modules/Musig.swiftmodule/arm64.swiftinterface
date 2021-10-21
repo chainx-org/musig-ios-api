@@ -6,6 +6,7 @@ import Foundation
 import Swift
 import _Concurrency
 public func getMusig(priv: Swift.String) -> Swift.OpaquePointer?
+public func getMyPrivkey(phrase: Swift.String) -> Swift.String
 public func getMyPubkey(priv: Swift.String) -> Swift.String
 public func getMyReveal(musig: Swift.OpaquePointer?) -> Swift.String
 public func encodeRevealStage(musig: Swift.OpaquePointer?) -> Swift.String
